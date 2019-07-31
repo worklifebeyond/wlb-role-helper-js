@@ -2,7 +2,7 @@
   "name": "wlb-role-helper",
   "version": "1.0.0",
   "description": "WorkLifeBeyond role helper for JavaScript ",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
