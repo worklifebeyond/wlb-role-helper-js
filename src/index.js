@@ -108,5 +108,6 @@ getOrgRoles = (roles) => {
 
 module.exports = {
     getGlobalRoles,
-    getOrgRoles
+    getOrgRoles,
+    Roles
 }
