@@ -1,6 +1,6 @@
 {
   "name": "wlb-role-helper",
-  "version": "1.0.1",
+  "version": "1.0.11",
   "description": "WorkLifeBeyond role helper for JavaScript ",
   "main": "./src/index.js",
   "scripts": {
@@ -18,6 +18,5 @@
   "homepage": "https://github.com/worklifebeyond/wlb-role-helper-js#readme",
   "devDependencies": {
     "mocha": "^6.2.0"
-  },
-  "private": true
+  }
 }
