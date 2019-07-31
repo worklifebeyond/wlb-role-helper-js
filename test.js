@@ -1,8 +1,8 @@
 const assert = require('assert');
 const { getGlobalRoles, getOrgRoles, Roles } = require('./src/index');
 
-describe('Array', function () {
-    describe('#indexOf()', function () {
+describe('Test must be passed', function () {
+    describe('Check roles', function () {
         const globalRoles = "111";
         it('should return role student', function () {
             assert.equal(Roles.STUDENT, getGlobalRoles(globalRoles)[0]);
