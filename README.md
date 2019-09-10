@@ -30,4 +30,4 @@
    
 * Test
 
-  Run `npm test`
+  Run `npm test`  
