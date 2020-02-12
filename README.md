@@ -1,5 +1,7 @@
 # WorkLifeBeyond role helper for JavaScript
 
+[![npm version](https://badge.fury.io/js/wlb-role-helper.svg)](https://badge.fury.io/js/wlb-role-helper)
+
 * Install
 
   *npm*: ```npm install --save wlb-role-helper```
@@ -28,4 +30,4 @@
    
 * Test
 
-  Run `npm test`
+  Run `npm test`  
