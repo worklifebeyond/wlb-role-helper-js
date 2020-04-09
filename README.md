@@ -23,7 +23,9 @@
    if(orgRoles.includes(Roles.ORGANIZATION_SUPERVISOR)){
       // true
    }
-  
+
+   const getRoleNumber = getRoleFromValueToNumber([1,3]);
+   // 10010000
   
   ```
    See [Test](https://github.com/worklifebeyond/wlb-role-helper-js/blob/master/test.js) for details.
