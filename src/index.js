@@ -106,8 +106,19 @@ getOrgRoles = (roles) => {
     return definedRoles;
 }
 
+getRoleFromValueToNumber = (selectedRoles) => {
+    const roles = [0,0,0,0,0,0,0,0]
+    for (let j = 0; j < selectedRoles.length; j++) {
+        const index = accessRight.findIndex((val) => val.value === selectedRoles[j])
+        role[index] = 1
+    }
+
+    return roles.join('')
+}
+
 module.exports = {
     getGlobalRoles,
     getOrgRoles,
-    Roles
+    Roles,
+    getRoleFromValueToNumber
 }
