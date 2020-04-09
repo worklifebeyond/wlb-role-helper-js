@@ -24,7 +24,7 @@
       // true
    }
 
-   const getRoleNumber = getRoleFromValueToNumber([1,3]);
+   const getRoleNumber = getRoleFromValueToNumber([0,3]);
    // 10010000
   
   ```
