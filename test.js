@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { getGlobalRoles, getOrgRoles, Roles } = require('./src/index');
+const { getGlobalRoles, getOrgRoles, Roles, getRoleFromValueToNumber } = require('./src/index');
 
 describe('Test must be passed', function () {
     describe('Check roles', function () {
@@ -20,6 +20,10 @@ describe('Test must be passed', function () {
         orgRoles = "00010001"
         it('should return role organization-supervisor', function () {
             assert.equal(Roles.ORGANIZATION_SUPERVISOR, getOrgRoles(orgRoles)[1]);
+        });
+        const selectedRoles = [0,3]
+        it('should return role 10010000', function () {
+            assert.equal(10010000, getRoleFromValueToNumber(selectedRoles));
         });
     });
 });

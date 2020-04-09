@@ -108,9 +108,43 @@ getOrgRoles = (roles) => {
 
 getRoleFromValueToNumber = (selectedRoles) => {
     const roles = [0,0,0,0,0,0,0,0]
+    const accessRight = [
+        {
+          value: 0,
+          label: Roles.ORGANIZATION_ADMINISTRATOR,
+        },
+        {
+          value: 1,
+          label: Roles.ORGANIZATION_ADMINISTRATOR,
+        },
+        {
+          value: 2,
+          label: Roles.ORGANIZATION_ADMINISTRATOR,
+        },
+        {
+          value: 3,
+          label: Roles.ORGANIZATION_ADMINISTRATOR,
+        },
+        {
+          value: 4,
+          label: Roles.ORGANIZATION_ADMINISTRATOR,
+        },
+        {
+          value: 5,
+          label: Roles.ORGANIZATION_ADMINISTRATOR,
+        },
+        {
+          value: 6,
+          label: Roles.ORGANIZATION_ADMINISTRATOR,
+        },
+        {
+          value: 7,
+          label: Roles.ORGANIZATION_ADMINISTRATOR,
+        },
+      ]
     for (let j = 0; j < selectedRoles.length; j++) {
         const index = accessRight.findIndex((val) => val.value === selectedRoles[j])
-        role[index] = 1
+        roles[index] = 1
     }
 
     return roles.join('')
