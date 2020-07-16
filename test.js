@@ -23,7 +23,10 @@ describe('Test must be passed', function () {
         });
         const selectedRoles = [0,3]
         it('should return role 10010000', function () {
-            assert.equal(10010000, getRoleFromValueToNumber(selectedRoles));
+            assert.equal(100100000, getRoleFromValueToNumber(selectedRoles));
+        });
+        it('should return role holding admin', function () {
+            assert.equal(Roles.HOLDING_ADMINISTRATOR, getOrgRoles("000000001")[0]);
         });
     });
 });

@@ -61,7 +61,7 @@ getOrgRoles = (roles) => {
                     definedRoles.push(Roles.ORGANIZATION_FINANCE_ADMIN);
                     break
             }
-        }else if (i === 3) {
+        } else if (i === 3) {
             switch (roles[3]) {
                 case "0":
                     break;
@@ -69,7 +69,7 @@ getOrgRoles = (roles) => {
                     definedRoles.push(Roles.ORGANIZATION_HR_ADMIN);
                     break
             }
-        }else if (i === 4) {
+        } else if (i === 4) {
             switch (roles[4]) {
                 case "0":
                     break;
@@ -77,7 +77,7 @@ getOrgRoles = (roles) => {
                     definedRoles.push(Roles.ORGANIZATION_HR_ASSISTANT);
                     break
             }
-        }else if (i === 5) {
+        } else if (i === 5) {
             switch (roles[5]) {
                 case "0":
                     break;
@@ -85,7 +85,7 @@ getOrgRoles = (roles) => {
                     definedRoles.push(Roles.ORGANIZATION_PAYROLL_MASTER);
                     break
             }
-        }else if (i === 6) {
+        } else if (i === 6) {
             switch (roles[6]) {
                 case "0":
                     break;
@@ -93,12 +93,20 @@ getOrgRoles = (roles) => {
                     definedRoles.push(Roles.ORGANIZATION_STAFF);
                     break
             }
-        }else if (i === 7) {
+        } else if (i === 7) {
             switch (roles[7]) {
                 case "0":
                     break;
                 case "1":
                     definedRoles.push(Roles.ORGANIZATION_SUPERVISOR);
+                    break
+            }
+        } else if (i === 8) {
+            switch (roles[8]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.HOLDING_ADMINISTRATOR);
                     break
             }
         }
@@ -107,41 +115,44 @@ getOrgRoles = (roles) => {
 }
 
 getRoleFromValueToNumber = (selectedRoles) => {
-    const roles = [0,0,0,0,0,0,0,0]
+    const roles = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     const accessRight = [
         {
-          value: 0,
-          label: Roles.ORGANIZATION_ADMINISTRATOR,
+            value: 0,
+            label: Roles.ORGANIZATION_ADMINISTRATOR,
         },
         {
-          value: 1,
-          label: Roles.ORGANIZATION_ADMINISTRATOR,
+            value: 1,
+            label: Roles.ORGANIZATION_ADMINISTRATOR,
         },
         {
-          value: 2,
-          label: Roles.ORGANIZATION_ADMINISTRATOR,
+            value: 2,
+            label: Roles.ORGANIZATION_ADMINISTRATOR,
         },
         {
-          value: 3,
-          label: Roles.ORGANIZATION_ADMINISTRATOR,
+            value: 3,
+            label: Roles.ORGANIZATION_ADMINISTRATOR,
         },
         {
-          value: 4,
-          label: Roles.ORGANIZATION_ADMINISTRATOR,
+            value: 4,
+            label: Roles.ORGANIZATION_ADMINISTRATOR,
         },
         {
-          value: 5,
-          label: Roles.ORGANIZATION_ADMINISTRATOR,
+            value: 5,
+            label: Roles.ORGANIZATION_ADMINISTRATOR,
         },
         {
-          value: 6,
-          label: Roles.ORGANIZATION_ADMINISTRATOR,
+            value: 6,
+            label: Roles.ORGANIZATION_ADMINISTRATOR,
         },
         {
-          value: 7,
-          label: Roles.ORGANIZATION_ADMINISTRATOR,
+            value: 7,
+            label: Roles.ORGANIZATION_ADMINISTRATOR,
+        }, {
+            value: 8,
+            label: Roles.HOLDING_ADMINISTRATOR,
         },
-      ]
+    ]
     for (let j = 0; j < selectedRoles.length; j++) {
         const index = accessRight.findIndex((val) => val.value === selectedRoles[j])
         roles[index] = 1
