@@ -11,5 +11,6 @@ module.exports = {
     ORGANIZATION_HR_ASSISTANT: "organization-hr-assistant",
     ORGANIZATION_PAYROLL_MASTER: "organization-payroll-master",
     ORGANIZATION_STAFF: "organization-staff",
-    ORGANIZATION_SUPERVISOR: "organization-supervisor"
+    ORGANIZATION_SUPERVISOR: "organization-supervisor",
+    HOLDING_ADMINISTRATOR: "holding-administrator"
 };
