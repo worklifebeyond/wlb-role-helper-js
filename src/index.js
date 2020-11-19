@@ -109,13 +109,21 @@ getOrgRoles = (roles) => {
                     definedRoles.push(Roles.HOLDING_ADMINISTRATOR);
                     break
             }
+        } else if (i === 9) {
+            switch (roles[9]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_BRANCH_ADMINISTRATOR);
+                    break
+            }
         }
     }
     return definedRoles;
 }
 
 getRoleFromValueToNumber = (selectedRoles) => {
-    const roles = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    const roles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     const accessRight = [
         {
             value: 0,
@@ -151,6 +159,9 @@ getRoleFromValueToNumber = (selectedRoles) => {
         }, {
             value: 8,
             label: Roles.HOLDING_ADMINISTRATOR,
+        },{
+            value: 9,
+            label: Roles.ORGANIZATION_BRANCH_ADMINISTRATOR,
         },
     ]
     for (let j = 0; j < selectedRoles.length; j++) {

@@ -17,16 +17,19 @@ describe('Test must be passed', function () {
         it('should return role org hr admin', function () {
             assert.equal(Roles.ORGANIZATION_HR_ADMIN, getOrgRoles(orgRoles)[0]);
         });
-        orgRoles = "00010001"
+        orgRoles = "000100011"
         it('should return role organization-supervisor', function () {
             assert.equal(Roles.ORGANIZATION_SUPERVISOR, getOrgRoles(orgRoles)[1]);
         });
         const selectedRoles = [0,3]
         it('should return role 10010000', function () {
-            assert.equal(100100000, getRoleFromValueToNumber(selectedRoles));
+            assert.equal(1001000000, getRoleFromValueToNumber(selectedRoles));
         });
         it('should return role holding admin', function () {
             assert.equal(Roles.HOLDING_ADMINISTRATOR, getOrgRoles("000000001")[0]);
+        });
+        it('should return role branch admin', function () {
+            assert.equal(Roles.ORGANIZATION_BRANCH_ADMINISTRATOR, getOrgRoles("0000000001")[0]);
         });
     });
 });
