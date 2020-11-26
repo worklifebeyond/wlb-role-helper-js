@@ -117,13 +117,21 @@ getOrgRoles = (roles) => {
                     definedRoles.push(Roles.ORGANIZATION_BRANCH_ADMINISTRATOR);
                     break
             }
+        } else if (i === 10) {
+            switch (roles[10]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_WB_ADMINISTRATOR);
+                    break
+            }
         }
     }
     return definedRoles;
 }
 
 getRoleFromValueToNumber = (selectedRoles) => {
-    const roles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    const roles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     const accessRight = [
         {
             value: 0,
@@ -131,37 +139,40 @@ getRoleFromValueToNumber = (selectedRoles) => {
         },
         {
             value: 1,
-            label: Roles.ORGANIZATION_ADMINISTRATOR,
+            label: Roles.ORGANIZATION_DEPARTMENT_HEAD,
         },
         {
             value: 2,
-            label: Roles.ORGANIZATION_ADMINISTRATOR,
+            label: Roles.ORGANIZATION_FINANCE_ADMIN,
         },
         {
             value: 3,
-            label: Roles.ORGANIZATION_ADMINISTRATOR,
+            label: Roles.ORGANIZATION_HR_ADMIN,
         },
         {
             value: 4,
-            label: Roles.ORGANIZATION_ADMINISTRATOR,
+            label: Roles.ORGANIZATION_HR_ASSISTANT,
         },
         {
             value: 5,
-            label: Roles.ORGANIZATION_ADMINISTRATOR,
+            label: Roles.ORGANIZATION_PAYROLL_MASTER,
         },
         {
             value: 6,
-            label: Roles.ORGANIZATION_ADMINISTRATOR,
+            label: Roles.ORGANIZATION_STAFF,
         },
         {
             value: 7,
-            label: Roles.ORGANIZATION_ADMINISTRATOR,
+            label: Roles.ORGANIZATION_SUPERVISOR,
         }, {
             value: 8,
             label: Roles.HOLDING_ADMINISTRATOR,
         },{
             value: 9,
             label: Roles.ORGANIZATION_BRANCH_ADMINISTRATOR,
+        },{
+            value: 10,
+            label: Roles.ORGANIZATION_WB_ADMINISTRATOR,
         },
     ]
     for (let j = 0; j < selectedRoles.length; j++) {

@@ -13,5 +13,6 @@ module.exports = {
     ORGANIZATION_STAFF: "organization-staff",
     ORGANIZATION_SUPERVISOR: "organization-supervisor",
     HOLDING_ADMINISTRATOR: "holding-administrator",
-    ORGANIZATION_BRANCH_ADMINISTRATOR: "organization-branch-administrator"
+    ORGANIZATION_BRANCH_ADMINISTRATOR: "organization-branch-administrator",
+    ORGANIZATION_WB_ADMINISTRATOR: "organization-wb-administrator"
 };

@@ -5,31 +5,34 @@ describe('Test must be passed', function () {
     describe('Check roles', function () {
         const globalRoles = "111";
         it('should return role student', function () {
-            assert.equal(Roles.STUDENT, getGlobalRoles(globalRoles)[0]);
+            assert.strictEqual(Roles.STUDENT, getGlobalRoles(globalRoles)[0]);
         });
         it('should return role instructor', function () {
-            assert.equal(Roles.INSTRUCTOR, getGlobalRoles(globalRoles)[1]);
+            assert.strictEqual(Roles.INSTRUCTOR, getGlobalRoles(globalRoles)[1]);
         });
         it('should return role org', function () {
-            assert.equal(Roles.ORGANIZATION, getGlobalRoles(globalRoles)[2]);
+            assert.strictEqual(Roles.ORGANIZATION, getGlobalRoles(globalRoles)[2]);
         });
-        let orgRoles = "00010000"
+        let orgRoles = "000100000"
         it('should return role org hr admin', function () {
-            assert.equal(Roles.ORGANIZATION_HR_ADMIN, getOrgRoles(orgRoles)[0]);
+            assert.strictEqual(Roles.ORGANIZATION_HR_ADMIN, getOrgRoles(orgRoles)[0]);
         });
-        orgRoles = "000100011"
+        orgRoles = "00010001100"
         it('should return role organization-supervisor', function () {
-            assert.equal(Roles.ORGANIZATION_SUPERVISOR, getOrgRoles(orgRoles)[1]);
+            assert.strictEqual(Roles.ORGANIZATION_SUPERVISOR, getOrgRoles(orgRoles)[1]);
         });
         const selectedRoles = [0,3]
-        it('should return role 10010000', function () {
-            assert.equal(1001000000, getRoleFromValueToNumber(selectedRoles));
+        it('should return role 10010000000', function () {
+            assert.strictEqual('10010000000', getRoleFromValueToNumber(selectedRoles));
         });
         it('should return role holding admin', function () {
-            assert.equal(Roles.HOLDING_ADMINISTRATOR, getOrgRoles("000000001")[0]);
+            assert.strictEqual(Roles.HOLDING_ADMINISTRATOR, getOrgRoles("0000000010")[0]);
         });
         it('should return role branch admin', function () {
-            assert.equal(Roles.ORGANIZATION_BRANCH_ADMINISTRATOR, getOrgRoles("0000000001")[0]);
+            assert.strictEqual(Roles.ORGANIZATION_BRANCH_ADMINISTRATOR, getOrgRoles("00000000010")[0]);
+        });
+        it('should return role wb admin', function () {
+            assert.strictEqual(Roles.ORGANIZATION_WB_ADMINISTRATOR, getOrgRoles("00000000001")[0]);
         });
     });
 });
