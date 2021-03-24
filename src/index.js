@@ -125,6 +125,118 @@ getOrgRoles = (roles) => {
                     definedRoles.push(Roles.ORGANIZATION_WB_ADMINISTRATOR);
                     break
             }
+        } else if (i === 11) {
+            switch (roles[11]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_TIME_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 12) {
+            switch (roles[12]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_FINANCIAL_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 13) {
+            switch (roles[13]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_DIRECTORY_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 14) {
+            switch (roles[14]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_COMPANY_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 15) {
+            switch (roles[15]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_ORGANIZATION_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 16) {
+            switch (roles[16]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_LEARNING_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 17) {
+            switch (roles[17]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_PERFORMANCE_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 18) {
+            switch (roles[18]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_TALENT_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 19) {
+            switch (roles[19]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_VENDOR_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 20) {
+            switch (roles[20]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_SURVEY_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 21) {
+            switch (roles[21]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_DOCUMENT_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 22) {
+            switch (roles[22]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_SUPPORT_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 23) {
+            switch (roles[23]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_SETTINGS_ADMINISTRATOR);
+                    break;
+            }
+        } else if (i === 24) {
+            switch (roles[24]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_HOLDING_ADMINISTRATOR);
+                    break;
+            }
         }
     }
     return definedRoles;
@@ -173,7 +285,49 @@ getRoleFromValueToNumber = (selectedRoles) => {
         },{
             value: 10,
             label: Roles.ORGANIZATION_WB_ADMINISTRATOR,
-        },
+        },{
+            value: 11,
+            label: Roles.ORGANIZATION_TIME_ADMINISTRATOR,
+        }, {
+            value: 12,
+            label: Roles.ORGANIZATION_FINANCIAL_ADMINISTRATOR,
+        }, {
+            value: 13,
+            label: Roles.ORGANIZATION_DIRECTORY_ADMINISTRATOR,
+        }, {
+            value: 14, 
+            label: Roles.ORGANIZATION_COMPANY_ADMINISTRATOR,
+        }, {
+            value: 15,
+            label: Roles.ORGANIZATION_ORGANIZATION_ADMINISTRATOR,
+        }, {
+            value: 16,
+            label: Roles.ORGANIZATION_LEARNING_ADMINISTRATOR,
+        }, {
+            value: 17,
+            label: Roles.ORGANIZATION_PERFORMANCE_ADMINISTRATOR,
+        }, {
+            value: 18,
+            label: Roles.ORGANIZATION_TALENT_ADMINISTRATOR,
+        }, {
+            value: 19,
+            label: Roles.ORGANIZATION_VENDOR_ADMINISTRATOR,
+        }, {
+            value: 20,
+            label: Roles.ORGANIZATION_SURVEY_ADMINISTRATOR,
+        }, {
+            value: 21,
+            label: Roles.ORGANIZATION_DOCUMENT_ADMINISTRATOR,
+        }, {
+            value: 22,
+            label: Roles.ORGANIZATION_SUPPORT_ADMINISTRATOR,
+        }, {
+            value: 23,
+            label: Roles.ORGANIZATION_SETTINGS_ADMINISTRATOR,
+        }, {
+            value: 24,
+            label: Roles.ORGANIZATION_HOLDING_ADMINISTRATOR,
+        }
     ]
     for (let j = 0; j < selectedRoles.length; j++) {
         const index = accessRight.findIndex((val) => val.value === selectedRoles[j])
