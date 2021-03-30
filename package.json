@@ -1,6 +1,6 @@
 {
   "name": "wlb-role-helper",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "WorkLifeBeyond role helper for JavaScript ",
   "main": "./src/index.js",
   "scripts": {
