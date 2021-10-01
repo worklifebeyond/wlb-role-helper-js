@@ -237,6 +237,14 @@ getOrgRoles = (roles) => {
                     definedRoles.push(Roles.ORGANIZATION_HOLDING_ADMINISTRATOR);
                     break;
             }
+        } else if (i === 25) {
+            switch (roles[25]) {
+                case "0":
+                    break;
+                case "1":
+                    definedRoles.push(Roles.ORGANIZATION_BUDGET_ADMINISTRATOR);
+                    break;
+            }
         }
     }
     return definedRoles;
@@ -276,57 +284,78 @@ getRoleFromValueToNumber = (selectedRoles) => {
         {
             value: 7,
             label: Roles.ORGANIZATION_SUPERVISOR,
-        }, {
+        },
+        {
             value: 8,
             label: Roles.HOLDING_ADMINISTRATOR,
-        },{
+        },
+        {
             value: 9,
             label: Roles.ORGANIZATION_BRANCH_ADMINISTRATOR,
-        },{
+        },
+        {
             value: 10,
             label: Roles.ORGANIZATION_WB_ADMINISTRATOR,
-        },{
+        },
+        {
             value: 11,
             label: Roles.ORGANIZATION_TIME_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 12,
             label: Roles.ORGANIZATION_FINANCIAL_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 13,
             label: Roles.ORGANIZATION_DIRECTORY_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 14, 
             label: Roles.ORGANIZATION_COMPANY_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 15,
             label: Roles.ORGANIZATION_ORGANIZATION_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 16,
             label: Roles.ORGANIZATION_LEARNING_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 17,
             label: Roles.ORGANIZATION_PERFORMANCE_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 18,
             label: Roles.ORGANIZATION_TALENT_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 19,
             label: Roles.ORGANIZATION_VENDOR_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 20,
             label: Roles.ORGANIZATION_SURVEY_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 21,
             label: Roles.ORGANIZATION_DOCUMENT_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 22,
             label: Roles.ORGANIZATION_SUPPORT_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 23,
             label: Roles.ORGANIZATION_SETTINGS_ADMINISTRATOR,
-        }, {
+        },
+        {
             value: 24,
             label: Roles.ORGANIZATION_HOLDING_ADMINISTRATOR,
+        },
+        {
+            value: 25,
+            label: Roles.ORGANIZATION_BUDGET_ADMINISTRATOR
         }
     ]
     for (let j = 0; j < selectedRoles.length; j++) {

@@ -28,5 +28,6 @@ module.exports = {
     ORGANIZATION_DOCUMENT_ADMINISTRATOR: "organization-document-administrator",
     ORGANIZATION_SUPPORT_ADMINISTRATOR: "organization-support-administrator",
     ORGANIZATION_SETTINGS_ADMINISTRATOR: "organization-settings-administrator",
-    ORGANIZATION_HOLDING_ADMINISTRATOR: "organization-holding-administrator"
+    ORGANIZATION_HOLDING_ADMINISTRATOR: "organization-holding-administrator",
+    ORGANIZATION_BUDGET_ADMINISTRATOR: "organization-budget-administrator"
 };
