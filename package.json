@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/worklifebeyond/wlb-role-helper-js#readme",
   "devDependencies": {
-    "mocha": "8.2.0"
+    "mocha": "10.4.0"
   }
 }
